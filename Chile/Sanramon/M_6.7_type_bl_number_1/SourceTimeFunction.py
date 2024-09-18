@@ -1,7 +1,8 @@
 import numpy as np
 from shakermaker.stf_extensions import Discrete
+from scipy.integrate import trapezoid
 
-def source_time_function(Tp,Te,Tr,dt,slp):
+def source_time_function(Tp,Te,Tr,dt,slp,get_slip=False):
     a = 1.
     b = 100.
     t = np.arange(0, Tr, dt)
@@ -20,4 +21,9 @@ def source_time_function(Tp,Te,Tr,dt,slp):
     svf /= A
     t = np.arange(Nt)*dt
     slip_rate_function = svf * slp 
+    
+    if get_slip:
+        time = np.arange(Nt)*dt
+        return trapezoid(slip_rate_function,time)
+
     return Discrete(slip_rate_function, t)
