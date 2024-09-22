@@ -2,8 +2,6 @@
     "Contries":[
         "Chile",
         "United States",
-        "Peru",
-        "Colombia"
     ],
     "Chile": {
         "Faults":["Sanramon"],
@@ -15,8 +13,6 @@
             }
         }
     },
-    "Peru": {},
-    "Colombia": {},
     "United States": {}
 
 
