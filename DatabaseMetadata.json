@@ -1,7 +1,6 @@
 {
     "Countries":[
-        "Chile",
-        "United States"
+        "Chile"
     ],
     "Chile": {
         "Faults":["Sanramon"],
@@ -12,8 +11,7 @@
                 "bl":{"Realizations": ["1","2","3","4","5","6","7","8","9","10"]}
             }
         }
-    },
-    "United States": {}
+    }
 
 
 }
